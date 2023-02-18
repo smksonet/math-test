@@ -11,7 +11,16 @@ function calculateArea(h,w){
 function calculateArea1(h,w){
   return 0.5*h*w;
 }
-
+function addResult(name, value){
+  const re = document.getElementById("result-container");
+  const newDiv = document.createElement("div");
+  newDiv.innerHTML = `<div class="flex justify-between items-center mt-2">
+  <p class="text-sm">${++counter}. ${name}</p>
+  <p class:"text-sm">${value} cm<sup>2</sup></p>
+  <button class="text-sm bg-blue-500 px-4 py-1 text-white rounded-md  hover:bg-neutral-300 hover:text-black">Convert to m<sup>2</sup></button>
+</div> `;
+  re.appendChild(newDiv);
+}
 
 // triangle-part...............................................................
 function triangle(){
@@ -102,7 +111,7 @@ function parallelogram(){
 // emtry-input
   binput.value='' 
   hinput.value=''
-  addResult("parallelogram", total);
+  addResult("Parallelogram", total);
 }
 document.getElementById('btn-parallelogram').addEventListener('click',function(){
   parallelogram()
