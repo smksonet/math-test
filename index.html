@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="container mx-auto">
+    <!-- navbar-part -->
+    <header>
+        <nav class="container mx-auto px-2 flex justify-between items-center bg-[#1090D81A] ">
+            <div>
+                <h1 class="text-2xl font-semibold">Interactive</h1>
+                <span class="font-semibold text-slate-500">Geometry Genius</span>
+            </div>
+            <button id="blog-btn" class="bg-blue-500 text-white px-4 py-1 rounded-md">Blog</button>
+        </nav>
+    </header>
+    <main>
+    <!-- card-part -->
+    <section class="container  my-4 lg:flex ">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:justify-evenly gap-4 px-4 lg:w-[75%] sm:w-full sm:justify-evenly">
+            <!-- Triangle-part -->
+            <div id ="triangle" onmouseover="mouseOver('triangle')" class="container trianger flex flex-col items-center shadow-lg shadow-gray-500/50 rounded-md bg-[#FBBCED] p-6">
+                <img class="w-50 h-40 " src="images/triangle.png" alt="">
+                <h1 class="text-lg font-bold mt-4">Triangle</h1>
+                <span class="text-slate-600 text-sm font-light">Area(A)=0.5 x b x h</span>  
+            <div class="container-lg flex items-center">
+                <input id="triangle-b" class="px-2 w-10 rounded-sm" type="text" name=""  placeholder="b">
+                <h3 class="p-2">cm</h3>
+                <input id="triangle-h" class="px-2 w-10 rounded-sm"  type="text" name=""  placeholder="h">
+                <h3 class="p-2">cm</h3>
+                </div>
+                <button id="triangle-btn" class="bg-blue-500 px-16 py-1 text-white rounded-md mt-4 hover:bg-neutral-100 hover:text-black">Calculate</button>
+            </div>
+            
+            <!-- Rectangle-part -->
+            <div id ="rectangle" onmouseover="mouseOver('rectangle')" class="container flex flex-col items-center shadow-lg shadow-gray-500/50 rounded-md p-6">
+                <img class="w-50 h-40 " src="images/rectangle.png" alt="">
+                <h1 class="text-lg font-bold mt-4">Rectangle</h1>
+                <span class="text-slate-600 text-sm font-light">Area (A) = w x I</span>
+            <div class="container-lg flex items-center">
+                <input id="winputRectangle" class="px-2 w-10 border-solid border-2 border-inherit rounded-sm" type="text" name="" placeholder="w">
+                <h3 class="p-2">cm</h3>
+                <input id="iinputRectangle" class="px-2 w-10 border-solid border-2 border-inherit rounded-sm"  type="text" name="" placeholder="I">
+                <h3 class="p-2">cm</h3>
+                </div>
+                <button id="btn-Rectangle" class="bg-blue-500 px-16 py-1 text-white rounded-md mt-4 hover:bg-neutral-300 hover:text-black">Calculate</button>
+            </div>
+
+            <!-- Parallelogram-part -->
+            <div id ="Parallelogram" onmouseover="mouseOver('Parallelogram')"  class="container flex flex-col items-center shadow-lg shadow-gray-500/50 rounded-md p-6">
+                <img class="w-50 h-40 " src="images/parallelogram.png" alt="">
+                <h1 class="text-lg font-bold mt-4">Parallelogram</h1>
+                <span class="text-slate-600 text-sm font-light">Area(A) = b x h</span>  
+            <div class="container-lg flex items-center">
+                <input id="binput"  class="px-2 w-10 border-solid border-2 border-inherit rounded-sm" type="text" name="" placeholder="b">
+                <h3 class="p-2">cm</h3>
+                <input id="hinput" class="px-2 w-10 border-solid border-2 border-inherit rounded-sm"  type="text" name="" placeholder="h">
+                <h3 class="p-2">cm</h3>
+                </div>
+                <button id="btn-parallelogram" class="bg-blue-500 px-16 py-1 text-white rounded-md mt-4 hover:bg-neutral-300 hover:text-black">Calculate</button>
+            </div>
+
+
+
+ <!-- card-section -->
+            <!-- Rhombus-part -->
+            <div id ="Rhombus" onmouseover="mouseOver('Rhombus')" class="container flex flex-col items-center shadow-lg shadow-gray-500/50 rounded-md bg-[#69C7F0] p-6">
+                <img class="w-50 h-40 " src="images/rhombus.png" alt="">
+                <h1 class="text-lg font-bold mt-4">Rhombus</h1>
+                <span class="text-slate-600 text-sm font-light">Area(A)=0.5 x d<sub>1</sub> x d<sub>2</sub></span> 
+            <div class="container-lg flex items-center">
+                <input id="input-d1"  class="px-2 w-10 rounded-sm" type="text" name="" placeholder="d1">
+                <h3 class="p-2">cm</h3>
+                <input id="input-d2" class="px-2 w-10 rounded-sm"  type="text" name="" placeholder="d2">
+                <h3 class="p-2">cm</h3>
+                </div>
+                <button id="btn-Rhombus" class="bg-blue-500 px-16 py-1 text-white rounded-md mt-4 hover:bg-cyan-100 hover:text-black">Calculate</button>
+            </div>
+
+            <!-- Pentagon-part -->
+            <div id ="Pentagon" onmouseover="mouseOver('Pentagon')" class="container flex flex-col items-center shadow-lg shadow-gray-500/50 rounded-md p-6">
+                <img class="w-50 h-40 " src="images/pentagon.png" alt="">
+                <h1 class="text-lg font-bold mt-4">Pentagon</h1>
+                <span class="text-slate-600 text-sm font-light">Area(A)=0.5 x p x b</span>  
+            <div class="container-lg flex items-center">
+
+                <input id="pentagon-input-p" class="px-2 w-10 border-solid border-2 border-inherit rounded-sm" type="text" name=""  placeholder="p">
+                <h3 class="p-2">cm</h3>
+
+                <input id="pentagon-input-b" class="px-2 w-10 border-solid border-2 border-inherit rounded-sm"  type="text" name=""  placeholder="b">
+                <h3 class="p-2">cm</h3>
+                </div>
+
+                <button id="btn-pentagon" class="bg-blue-500 px-16 py-1 text-white rounded-md mt-4  hover:bg-neutral-300 hover:text-black ">Calculate</button>
+            </div>
+
+            <!-- Ellipse-part -->
+            <div id ="Ellipse" onmouseover="mouseOver('Ellipse')" class="container flex flex-col items-center shadow-lg shadow-gray-500/50 rounded-md p-6">
+                <img class="w-50 h-40 " src="images/ellipse.png" alt="">
+                <h1 class="text-lg font-bold mt-4">Ellipse</h1>
+                <span class="text-slate-600 text-sm font-light">Area (A) = 	πab</span>  
+            <div class="container-lg flex items-center">
+
+                <input id="inputEllipse-a" class="px-2 w-10 border-solid border-2 border-inherit rounded-sm" type="text" name="" id="" placeholder="a">
+                <h3 class="p-2">cm</h3>
+
+                <input id="inputEllipse-b" class="px-2 w-10 border-solid border-2 border-inherit rounded-sm"  type="text" name="" placeholder="b">
+                <h3 class="p-2">cm</h3>
+                </div>
+
+                <button id="btn-ellipse" class="bg-blue-500 px-16 py-1 text-white rounded-md mt-4  hover:bg-neutral-300 hover:text-black">Calculate</button>
+
+            </div>
+        </div>
+                    <!-- Area Calculation-part -->
+                    <div id="result-container" class="container flex flex-col shadow-lg shadow-gray-500/50 rounded-md px-2 lg:w-[25%] sm:w-full sm:w-full">
+                        <h1 id = 'r-header' class="text-lg font-bold text-center mt-4 "><u>Area Calculation</u></h1>                        
+                    </div> 
+    </section>
+    </main>
+    <script src="js/test.js"></script>
+    <script>
+        function mouseOver(id){
+            let maxVal = 0xFFFFFF; // 16777215
+            let randomNumber = Math.random() * maxVal; 
+            randomNumber = Math.floor(randomNumber);
+            randomNumber = randomNumber.toString(16);
+            let randColor = randomNumber.padStart(6, 0);   
+            document.getElementById(`${id}`).style.backgroundColor  =`#${randColor.toUpperCase()}`
+        }
+    </script>
+</body>
+</html>
